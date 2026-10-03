@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shazia Navarose | AI &amp; Data Science</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./SHAZIA-PORTFOLIO_files/css2" rel="stylesheet">
+<style>
+    /* ===============================
+       GENERAL
+    =============================== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
+        --bg: #f7f7fb;
+        --card: #ffffff;
+        --text: #17171c;
+        --muted: #6d6d7a;
+        --border: #e5e5ed;
+        --primary: #7257ff;
+        --primary2: #a36bff;
+        --shadow: 0 20px 60px rgba(60, 40, 150, 0.12);
+    }
+    body.dark {
+        --bg: #0c0c12;
+        --card: #15151e;
+        --text: #f5f5f7;
+        --muted: #aaaaB8;
+        --border: #292934;
+        --shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        transition: 0.3s;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    /* ===============================
+       NAVBAR
+    =============================== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(247,247,251,0.85);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--border);
+    }
+    body.dark header {
+        background: rgba(12,12,18,0.85);
+    }
+    .navbar {
+        width: 92%;
+        max-width: 1150px;
+        height: 75px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+    .logo span {
+        color: var(--primary);
+    }
+    .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+    }
+    .nav-links a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        transition: 0.2s;
+    }
+    .nav-links a:hover {
+        color: var(--primary);
+    }
+    .nav-buttons {
+        display: flex;
+        gap: 10px;
+    }
+    .nav-buttons button {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+        color: var(--text);
+        cursor: pointer;
+    }
+    .menu-btn {
+        display: none;
+    }
+    /* ===============================
+       HERO
+    =============================== */
+    .hero {
+        min-height: 100vh;
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 60px;
+    }
+    .small-title {
+        color: var(--primary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+    .hero h1 {
+        font-size: clamp(3rem,7vw,6rem);
+        line-height: 1;
+        letter-spacing: -4px;
+        margin: 20px 0;
+    }
+    .hero h1 span {
+        color: var(--primary);
+    }
+    .hero h2 {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+    .hero-description {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.05rem;
+    }
+    .hero-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 22px;
+        border-radius: 12px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+    .primary-btn {
+        background: var(--primary);
+        color: white;
+    }
+    .primary-btn:hover {
+        transform: translateY(-3px);
+        box-shadow:
+            0 12px 30px rgba(114,87,255,0.3);
+    }
+    .secondary-btn {
+        background: var(--card);
+        border: 1px solid var(--border);
+    }
+    .secondary-btn:hover {
+        border-color: var(--primary);
+    }
+    .social-links {
+        display: flex;
+        gap: 25px;
+        margin-top: 25px;
+        color: var(--muted);
+    }
+    .social-links a:hover {
+        color: var(--primary);
+    }
+    /* ===============================
+       HERO GRAPHIC
+    =============================== */
+    .hero-image {
+        position: relative;
+        height: 450px;
+        display: grid;
+        place-items: center;
+    }
+    .glow {
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        background:
+            linear-gradient(
+                135deg,
+                var(--primary),
+                var(--primary2)
+            );
+        box-shadow:
+            0 30px 100px
+            rgba(114,87,255,0.35);
+    }
+    .profile-circle {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--card);
+        font-size: 4rem;
+        font-weight: 800;
+        box-shadow: var(--shadow);
+    }
+    .floating-card {
+        position: absolute;
+        padding: 12px 17px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .card1 {
+        top: 45px;
+        right: 0;
+    }
+    .card2 {
+        bottom: 70px;
+        left: 0;
+    }
+    .card3 {
+        bottom: 15px;
+        right: 30px;
+    }
+    /* ===============================
+       SECTIONS
+    =============================== */
+    .section {
+        padding: 110px 4%;
+    }
+    .gray-section {
+        background: var(--card);
+    }
+    .section-title {
+        width: 92%;
+        max-width: 1150px;
+        margin: 0 auto 50px;
+    }
+    .section-title p {
+        color: var(--primary);
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+    .section-title h2 {
+        font-size: clamp(2.3rem,5vw,4rem);
+        line-height: 1.1;
+        margin-top: 12px;
+    }
+    .section-title h2 span {
+        color: var(--primary);
+    }
+    /* ===============================
+       ABOUT
+    =============================== */
+    .about-container {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    .about-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    .about-text p {
+        color: var(--muted);
+        margin-bottom: 15px;
+    }
+    .about-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+    .stat {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 30px;
+    }
+    .stat h3 {
+        color: var(--primary);
+        margin-bottom: 5px;
+    }
+    .stat p {
+        color: var(--muted);
+        font-size: 0.85rem;
+    }
+    /* ===============================
+       SKILLS
+    =============================== */
+    .skills-container {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns:
+            repeat(3,1fr);
+        gap: 18px;
+    }
+    .skill-card {
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--bg);
+        transition: 0.25s;
+    }
+    .skill-card:hover {
+        transform: translateY(-7px);
+        box-shadow: var(--shadow);
+    }
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        background:
+            rgba(114,87,255,0.1);
+        color: var(--primary);
+        border-radius: 12px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .skill-card h3 {
+        margin-bottom: 8px;
+    }
+    .skill-card p {
+        color: var(--muted);
+        font-size: 0.9rem;
+    }
+    /* ===============================
+       PROJECTS
+    =============================== */
+    .projects-container {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns:
+            repeat(3,1fr);
+        gap: 20px;
+    }
+    .project-card {
+        min-height: 330px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--card);
+        transition: 0.25s;
+    }
+    .project-card:hover {
+        transform: translateY(-7px);
+        box-shadow: var(--shadow);
+    }
+    .project-number {
+        color: var(--muted);
+        font-size: 0.8rem;
+        margin-bottom: 50px;
+    }
+    .project-tags {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+    }
+    .project-tags span {
+        background:
+            rgba(114,87,255,0.1);
+        color: var(--primary);
+        border-radius: 50px;
+        padding: 5px 9px;
+        font-size: 0.7rem;
+    }
+    .project-card h3 {
+        margin-bottom: 10px;
+    }
+    .project-card p {
+        color: var(--muted);
+        font-size: 0.9rem;
+    }
+    .project-link {
+        display: inline-block;
+        margin-top: 22px;
+        color: var(--primary);
+        font-weight: 600;
+    }
+    /* ===============================
+       EXPERIENCE
+    =============================== */
+    .timeline {
+        width: 92%;
+        max-width: 850px;
+        margin: auto;
+    }
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        gap: 20px;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+        border-bottom:
+            1px solid var(--border);
+    }
+    .timeline-dot {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background:
+            rgba(114,87,255,0.1);
+        color: var(--primary);
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    .timeline-content h3 {
+        margin-bottom: 4px;
+    }
+    .timeline-content span {
+        color: var(--primary);
+        font-size: 0.8rem;
+    }
+    .timeline-content p {
+        color: var(--muted);
+        margin-top: 8px;
+    }
+    /* ===============================
+       CONTACT
+    =============================== */
+    .contact-container {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    .contact-info > p {
+        color: var(--muted);
+        max-width: 500px;
+    }
+    .contact-details {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    .contact-details div {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    .contact-details span {
+        display: flex;
+        flex-direction: column;
+        color: var(--muted);
+    }
+    .contact-details strong {
+        color: var(--text);
+        font-weight: 500;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    form label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    input,
+    textarea {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+        color: var(--text);
+        font-family: inherit;
+        outline: none;
+    }
+    input:focus,
+    textarea:focus {
+        border-color: var(--primary);
+    }
+    form button {
+        margin-top: 15px;
+    }
+    #formMessage {
+        color: var(--primary);
+        font-size: 0.85rem;
+    }
+    /* ===============================
+       FOOTER
+    =============================== */
+    footer {
+        border-top: 1px solid var(--border);
+        padding: 25px 4%;
+    }
+    .footer-content {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+    }
+    .footer-content a:hover {
+        color: var(--primary);
+    }
+    /* ===============================
+       MOBILE
+    =============================== */
+    @media (max-width:850px) {
+        .menu-btn {
+            display: block;
+        }
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            width: 100%;
+            background: var(--card);
+            border-bottom:
+                1px solid var(--border);
+            padding: 25px;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 30px;
+        }
+        .hero-description {
+            margin: auto;
+        }
+        .hero-buttons,
+        .social-links {
+            justify-content: center;
+        }
+        .hero-image {
+            height: 350px;
+        }
+        .about-container,
+        .contact-container {
+            grid-template-columns: 1fr;
+            gap: 45px;
+        }
+        .skills-container,
+        .projects-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (max-width:550px) {
+        .hero h1 {
+            font-size: 3.2rem;
+            letter-spacing: -2px;
+        }
+        .hero-buttons {
+            flex-direction: column;
+        }
+        .skills-container,
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+        .about-stats {
+            grid-template-columns: 1fr;
+        }
+        .footer-content {
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+        .floating-card {
+            font-size: 0.7rem;
+        }
+    }
+</style>
+</head>
+<body>
+<!-- =========================================
+     NAVBAR
+========================================= -->
+<header>
+<nav class="navbar">
+    <div class="logo">
+        SN<span>.</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#home">Home</a>
+        </li>
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#about">About</a>
+        </li>
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#skills">Skills</a>
+        </li>
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#projects">Projects</a>
+        </li>
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#experience">Experience</a>
+        </li>
+        <li>
+            <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact">Contact</a>
+        </li>
+    </ul>
+    <div class="nav-buttons">
+        <button id="themeToggle">
+            🌙
+        </button>
+        <button id="menuToggle" class="menu-btn">
+            ☰
+        </button>
+    </div>
+</nav>
+</header>
+<!-- =========================================
+     HOME
+========================================= -->
+<section id="home" class="hero">
+<div class="hero-content">
+    <p class="small-title">
+        HELLO, I'M
+    </p>
+    <h1>
+        Shazia
+        <span>Navarose M S</span>
+    </h1>
+    <h2>
+        BTech AI &amp; Data Science Student
+    </h2>
+    <p class="hero-description">
+        I'm passionate about Artificial Intelligence,
+        Data Science, programming and building technology
+        that solves real-world problems.
+    </p>
+    <div class="hero-buttons">
+        <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#projects" class="btn primary-btn">
+            View My Projects
+        </a>
+        <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact" class="btn secondary-btn">
+            Contact Me
+        </a>
+    </div>
+    <div class="social-links">
+        <a href="https://github.com/" target="_blank">
+            GitHub ↗
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+            LinkedIn ↗
+        </a>
+    </div>
+</div>
+<div class="hero-image">
+    <div class="glow"></div>
+    <div class="profile-circle">
+        SN
+    </div>
+    <div class="floating-card card1">
+        🤖 AI &amp; DS
+    </div>
+    <div class="floating-card card2">
+        🐍 Python
+    </div>
+    <div class="floating-card card3">
+        🇯🇵 NAT N5
+    </div>
+</div>
+</section>
+<!-- =========================================
+     ABOUT
+========================================= -->
+<section id="about" class="section">
+<div class="section-title">
+    <p>
+        01 — ABOUT ME
+    </p>
+    <h2>
+        Who <span>Am I?</span>
+    </h2>
+</div>
+<div class="about-container">
+    <div class="about-text">
+        <h3>
+            Curious learner. Future AI professional.
+        </h3>
+        <p>
+            I'm a BTech student specializing in
+            Artificial Intelligence and Data Science.
+            I enjoy learning new technologies and
+            applying my knowledge to practical projects.
+        </p>
+        <p>
+            My interests include Artificial Intelligence,
+            Data Science, Python, Web Development,
+            AI tools and intelligent systems.
+        </p>
+        <p>
+            I believe continuous learning and
+            hands-on projects are the best ways
+            to grow as a technology professional.
+        </p>
+    </div>
+    <div class="about-stats">
+        <div class="stat" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+            <h3>
+                AI &amp; DS
+            </h3>
+            <p>
+                Specialization
+            </p>
+        </div>
+        <div class="stat" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+            <h3>
+                Python
+            </h3>
+            <p>
+                Programming
+            </p>
+        </div>
+        <div class="stat" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+            <h3>
+                NAT N5
+            </h3>
+            <p>
+                Japanese
+            </p>
+        </div>
+        <div class="stat" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+            <h3>
+                AI Tools
+            </h3>
+            <p>
+                Learning
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<!-- =========================================
+     SKILLS
+========================================= -->
+<section id="skills" class="section gray-section">
+<div class="section-title">
+    <p>
+        02 — MY SKILLS
+    </p>
+    <h2>
+        My <span>Toolkit</span>
+    </h2>
+</div>
+<div class="skills-container">
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            🐍
+        </div>
+        <h3>
+            Python
+        </h3>
+        <p>
+            Programming, automation and
+            AI fundamentals.
+        </p>
+    </div>
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            ☕
+        </div>
+        <h3>
+            Java
+        </h3>
+        <p>
+            Object-oriented programming,
+            JDBC and applications.
+        </p>
+    </div>
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            C
+        </div>
+        <h3>
+            C / C++
+        </h3>
+        <p>
+            Programming fundamentals
+            and problem solving.
+        </p>
+    </div>
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            &lt;/&gt;
+        </div>
+        <h3>
+            Web Development
+        </h3>
+        <p>
+            HTML, CSS and JavaScript.
+        </p>
+    </div>
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            🤖
+        </div>
+        <h3>
+            AI Tools
+        </h3>
+        <p>
+            Exploring modern AI tools
+            and workflows.
+        </p>
+    </div>
+    <div class="skill-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="skill-icon">
+            📊
+        </div>
+        <h3>
+            Data Science
+        </h3>
+        <p>
+            Data analysis, preprocessing
+            and visualization.
+        </p>
+    </div>
+</div>
+</section>
+<!-- =========================================
+     PROJECTS
+========================================= -->
+<section id="projects" class="section">
+<div class="section-title">
+    <p>
+        03 — PROJECTS
+    </p>
+    <h2>
+        What I've <span>Built</span>
+    </h2>
+</div>
+<div class="projects-container">
+    <div class="project-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="project-number">
+            01
+        </div>
+        <div>
+            <img src="./SHAZIA-PORTFOLIO_files/images" width="400">
+        </div>
+        <div class="project-tags">
+            <span>AI</span>
+            <span>IoT</span>
+            <span>Security</span>
+        </div>
+        <h3>
+            Online Fraud Detection Using IoT
+        </h3>
+        <p>
+            A project designed to identify
+            suspicious transactions using IoT
+            and machine-learning techniques.
+        </p>
+        <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact" class="project-link">
+            Discuss Project →
+        </a>
+    </div>
+    <div class="project-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="project-number">
+            02
+        </div>
+        <div>
+            <img src="./SHAZIA-PORTFOLIO_files/WhatsApp Image 2026-10-03 at 1.39.03 PM.jpeg" width="400">
+        </div>
+        <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+        <h3>
+            Personal Portfolio Website
+        </h3>
+        <p>
+            A responsive portfolio website
+            designed to showcase skills,
+            projects and achievements.
+        </p>
+        <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact" class="project-link">
+            Discuss Project →
+        </a>
+    </div>
+    <div class="project-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="project-number">
+            03
+            <div>
+                <img src="./SHAZIA-PORTFOLIO_files/images(1)" width="400">
+            </div>
+        </div>
+        <div class="project-tags">
+            <span>Python</span>
+            <span>Data</span>
+        </div>
+        <h3>
+            Data Analysis Project
+        </h3>
+        <p>
+            A learning project involving
+            data preprocessing, analysis,
+            visualization and exploration.
+        </p>
+        <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contact" class="project-link">
+            Discuss Project →
+        </a>
+    </div>
+    <div class="project-card" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="project-number"></div>
+        04
+        <div><img src="./SHAZIA-PORTFOLIO_files/images(2)" width="400">
+                 </div>
+    <div class="project-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JAVASCRIPT</span>
+    </div>
+<h3>Sweet crumbs project</h3>
+    
+    <p>My first freelancing project was developing a modern and responsive brownie bakery webpage. The website showcases brownie products with an attractive design, Add to Cart functionality, and an easy-to-use order form.
+</p>
+<a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#contrast" class="project-link">
+    Discuss project →
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================
+     EXPERIENCE
+========================================= -->
+<section id="experience" class="section gray-section">
+<div class="section-title">
+    <p>
+        04 — EXPERIENCE
+    </p>
+    <h2>
+        My <span>Journey</span>
+    </h2>
+</div>
+<div class="timeline">
+    <div class="timeline-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="timeline-dot">
+            01
+        </div>
+        <div class="timeline-content">
+            <h3>
+                Internship
+                </h3><h5>Web development intern</h5>
+                <h5>Machine Learning intern</h5>
+            
+            <span>
+                Currently
+            </span>
+            <h4>FULL STACK DEVELOPER</h4>
+            <p>
+                Gaining practical industry exposure
+                and developing professional
+                technical skills.
+            </p>
+        </div>
+    </div>
+    <div class="timeline-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="timeline-dot">
+            02
+        </div>
+        <div class="timeline-content">
+            <h3>
+                BTech — AI &amp; Data Science
+            </h3>
+            <span>
+                Education
+            </span>
+            <p>
+                Developing knowledge in Artificial
+                Intelligence, programming,
+                Data Science and computer science.
+            </p>
+        </div>
+    </div>
+    <div class="timeline-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+        <div class="timeline-dot">
+            03
+        </div>
+        <div class="timeline-content">
+            <h3>
+                Japanese Language
+            </h3>
+            <span>
+                NAT N5 Certified
+            </span>
+            <p>
+                Learning Japanese language and
+                developing communication skills.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<!-- =========================================
+     CONTACT
+========================================= -->
+<section id="contact" class="section">
+<div class="contact-container">
+    <div class="contact-info">
+        <div class="section-title">
+            <p>
+                05 — CONTACT
+            </p>
+            <h2>
+                Let's <span>Connect.</span>
+            </h2>
+        </div>
+        <p>
+            Have an opportunity, project idea
+            or collaboration in mind?
+            I'd love to hear from you.
+        </p>
+        <div class="contact-details">
+            <div>
+                📧
+                <span>
+                    Email
+                    <strong>
+                        shazianavarose@gmail.com
+                    </strong>
+                </span>
+            </div>
+            <div>
+                💼
+                <span>
+                    LinkedIn
+                    <strong>
+                     linkedin.com/in/https://www.linkedin.com/in/shazia-navarose-8668a741a
+                 </strong>
+                </span>
+            </div>
+            <div>
+                💻<span>
+                    GitHub
+                    <strong>
+                        github.com/shazianavarose
+                    </strong>
+                </span>
+            </div>
+        </div>
+    </div>
+    <form id="contactForm">
+        <label>
+            Your Name
+        </label>
+        <input type="text" id="name" placeholder="Enter your name" required="">
+        <label>
+            Email Address
+        </label>
+        <input type="email" id="email" placeholder="Enter your email" required="">
+        <label>
+            Message
+        </label>
+        <textarea id="message" rows="6" placeholder="Write your message..." required=""></textarea>
+        <button type="submit" class="btn primary-btn">
+            Send Message →
+        </button>
+        <p id="formMessage"></p>
+    </form>
+</div>
+</section>
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer>
+<div class="footer-content">
+    <div class="logo">
+        SN<span>.</span>
+    </div>
+    <p>
+        © <span id="year">2026</span>
+        Shazia Navarose.
+        All Rights Reserved.
+    </p>
+    <a href="file:///C:/Users/Dell/OneDrive/Desktop/web%20project/port.html#home">
+        Back to top ↑
+    </a>
+</div>
+</footer>
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+<script>
+/* ===============================
+   MOBILE MENU
+=============================== */
+const menuToggle =
+    document.getElementById("menuToggle");
+const navLinks =
+    document.getElementById("navLinks");
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+});
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
+        link.addEventListener("click", function() {
+            navLinks.classList.remove("active");
+        });
+    });
+/* ===============================
+   DARK MODE
+=============================== */
+const themeToggle =
+    document.getElementById("themeToggle");
+const savedTheme =
+    localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️";
+}
+themeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains("dark")) {
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+    }
+    else {
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    }
+});
+/* ===============================
+   CURRENT YEAR
+=============================== */
+document.getElementById("year")
+    .textContent = new Date().getFullYear();
+/* ===============================
+   CONTACT FORM
+=============================== */
+const contactForm =
+    document.getElementById("contactForm");
+const formMessage =
+    document.getElementById("formMessage");
+contactForm.addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
+        const name =
+            document.getElementById("name")
+                .value.trim();
+        const email =
+            document.getElementById("email")
+                .value.trim();
+        const message =
+            document.getElementById("message")
+                .value.trim();
+        if (!name || !email || !message) {
+            formMessage.textContent =
+                "Please fill in all the fields.";
+            return;
+        }
+        formMessage.textContent =
+            "Thanks, " + name +
+            "! Your message has been received.";
+        contactForm.reset();
+    }
+);
+/* ===============================
+   SCROLL ANIMATION
+=============================== */
+const elements =
+    document.querySelectorAll(
+        ".skill-card, .project-card, .timeline-item, .stat"
+    );
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform =
+                        "translateY(0)";
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+elements.forEach(function(element) {
+    element.style.opacity = "0";
+    element.style.transform =
+        "translateY(30px)";
+    element.style.transition =
+        "all 0.6s ease";
+    observer.observe(element);
+});
+</script>
+
+</body></html>
